@@ -9,7 +9,7 @@ public class Testing : MonoBehaviour
 
 	private void Start()
 	{
-		pathfinding = new Pathfinding(10, 10);
+		pathfinding = new Pathfinding(18, 10);
 		characterPathfinding = FindObjectOfType<CharacterPathfindingHandler>();
 	}
 
@@ -25,11 +25,10 @@ public class Testing : MonoBehaviour
 			{
 				for (int i = 0; i < path.Count - 1; i++)
 				{
-					Debug.Log(path[i].x + " " + path[i].y);
 					Debug.DrawLine(new Vector2(path[i].x, path[i].y) * 1f + Vector2.one * 1f, new Vector2(path[i + 1].x, path[i + 1].y) * 1f + Vector2.one * 1f, Color.green, 20f);
 				}
 			}
-			characterPathfinding.SetTargetPosition(mouseWorldPosition);
+			characterPathfinding.SetTargetPosition(mouseXYPosition);
 		}
 		if (Input.GetMouseButtonDown(1))
 		{
