@@ -23,7 +23,7 @@ public class CharacterPathfindingHandler : MonoBehaviour
 		if (pathVectorList != null)
 		{
 			Vector2 targetPosition = pathVectorList[currentPathIndex];
-			if (Vector2.Distance(transform.position, targetPosition) > 1f)
+			if (Vector2.Distance(transform.position, targetPosition) > 0.1f)
 			{
 				Vector2 moveDirection = (targetPosition - (Vector2)transform.position).normalized;
 

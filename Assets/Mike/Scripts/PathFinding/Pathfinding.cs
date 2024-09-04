@@ -16,7 +16,7 @@ public class Pathfinding {
 	public Pathfinding(int width, int height)
 	{
 		Instance = this;
-		grid = new GridClass<PathNode>(width, height, 1f, new Vector2(1, 1), (GridClass<PathNode> g, int x, int y) => new PathNode(g, x, y));
+		grid = new GridClass<PathNode>(width, height, 1f, new Vector2(-9, -5), (GridClass<PathNode> g, int x, int y) => new PathNode(g, x, y));
 	}
 
 	public GridClass<PathNode> GetGrid()
@@ -154,9 +154,6 @@ public class Pathfinding {
 
 	private int CalculateDistanceCost(PathNode a, PathNode b)
 	{
-		Debug.Log(a.x + " / " + a.y);
-		Debug.Log(b.x + " / " + b.y);
-
 		int xDistance = Mathf.Abs(a.x - b.x);
 		int yDistance = Mathf.Abs(a.y - b.y);
 		int remaining = Mathf.Abs(xDistance - yDistance);
