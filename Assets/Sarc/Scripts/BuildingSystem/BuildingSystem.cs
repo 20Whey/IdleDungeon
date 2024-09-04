@@ -3,7 +3,6 @@ using UnityEngine.Tilemaps;
 
 public class BuildingSystem : Singleton<BuildingSystem>
 {
-
     [SerializeField] private GridLayout gridLayout;
     [SerializeField] private Tilemap groundTileMap;
     [SerializeField] private TileBase takenTile;
