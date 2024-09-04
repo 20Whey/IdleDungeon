@@ -38,7 +38,7 @@ public class GridClass<TGridObject>
 		Debug.DrawLine(XY_ToWorldPos(width, 0), XY_ToWorldPos(width, height), Color.white, 100f);
 	}
 
-	public Vector2 XY_ToWorldPos(int x, int y)
+	public Vector2 XY_ToWorldPos(float x, float y)
 	{
 		return new Vector2(x, y) * cellSize + originPosition;
 	}

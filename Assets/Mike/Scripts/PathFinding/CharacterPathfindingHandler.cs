@@ -8,27 +8,23 @@ public class CharacterPathfindingHandler : MonoBehaviour
 
     private int currentPathIndex;
     private List<Vector2> pathVectorList;
+	private Vector2 characterXYPosition;
+	private Vector2 targetWorldPosition;
 
-	private void Start()
-	{
-		
-	}
 	private void Update()
 	{
+		characterXYPosition = Pathfinding.Instance.GetGrid().WorldPosTo_XY(transform.position);
 		HandleMovement();
 	}
-
 	private void HandleMovement()
 	{
 		if (pathVectorList != null)
 		{
 			Vector2 targetPosition = pathVectorList[currentPathIndex];
-			if (Vector2.Distance(transform.position, targetPosition) > 0.1f)
+			if (Vector2.Distance(characterXYPosition, targetPosition) > 0.1f)
 			{
-				Vector2 moveDirection = (targetPosition - (Vector2)transform.position).normalized;
-
-				float previousDistance = Vector2.Distance(transform.position, targetPosition);
-				transform.position = (Vector2)transform.position + moveDirection * speed * Time.deltaTime;
+				targetWorldPosition = Pathfinding.Instance.GetGrid().XY_ToWorldPos(targetPosition.x, targetPosition.y);
+				transform.position = Vector2.MoveTowards(transform.position, targetWorldPosition, speed * Time.deltaTime);
 			}
 			else
 			{
@@ -54,7 +50,10 @@ public class CharacterPathfindingHandler : MonoBehaviour
 	{
 		currentPathIndex = 0;
 		pathVectorList = Pathfinding.Instance.FindPath(GetPosition(), targetPosition);
-
+		foreach (Vector2 vector in pathVectorList)
+		{
+			Debug.Log("Vector List entry: " + vector);
+		}
 		if (pathVectorList != null && pathVectorList.Count > 1)
 		{
 			pathVectorList.RemoveAt(0);
