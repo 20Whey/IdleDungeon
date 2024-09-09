@@ -3,7 +3,6 @@
 using namespace std;
 using UnityEngine;
 using System;
-
 template <matrix T>
 
 class Edge {
@@ -29,38 +28,16 @@ public:
 Edge* returnAdjacentEdges(int index){
 return adjacentEdges[index];
 }
-
-
-
 private:
 Edge* adjacentEdges[4];
-
-
-
-
 }
 
-
-
-extern "C" {
-DLL_EXPORT matrix changeMatrixAndReturn(matrix input){
-
-
-
-
-
-} 
-
-}
-
-
-extern "C" {
-int DLL_EXPORT returnTenPlusWhatever(int a){
-return a + 10;
-    }
 // Prototype shape within matrix creation
-
-
-
+extern "C" {
+std::array<string, 4> DLL_EXPORT createFakeShape(std::array<string, 100> basis){
+std::array<string, 4> arr = {"0,0", "1,0", "0,1", "1,1"};
+return arr;
+}
+}
 
 }
