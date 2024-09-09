@@ -1,6 +1,7 @@
 #ifndef TEST_H
 #define TEST_H
 #include <array>
+#include <string>
 #define DLL_EXPORT __declspec(dllexport)
 using namespace std;
 
