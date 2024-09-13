@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Experimental.AI;
 using System.Linq;
+using System;
 [InitializeOnLoad]
 public class CPPBase : MonoBehaviour
 {
@@ -13,18 +14,29 @@ public class CPPBase : MonoBehaviour
 
     //private static extern int[,] returnShape(int[,] originalMatrix);
     [DllImport("test")]
-    private static extern int returnTenPlusWhatever(int a);
+    private static extern IntPtr feedToCPP();
 
-    private static extern string[] FeedInData(string[] data);
+    [DllImport("test")]
+    [return: MarshalAs(UnmanagedType.SafeArray, SafeArraySubType = VarEnum.VT_BSTR)]
+    private static extern IntPtr retrieveData(string[] arr, int len);
     public int maxX;
     public int maxY;
     public Vector2[,] Matrix;
 
     void Start()
     {
-        // Debug.Log(returnTenPlusWhatever(1));
-CreateGrid();
-FeedInData(RuinGrid(Matrix));
+        IntPtr result = retrieveData(turnPositionsIntoStringArray(CreateGrid()), 100);
+        string[] processedData = new string[maxX*maxY];
+        for (int i = 0; i < 4; i++)
+        {
+            IntPtr ptr = Marshal.ReadIntPtr(result, i * IntPtr.Size);
+            processedData[i] = Marshal.PtrToStringAnsi(ptr);
+            Debug.Log(processedData[i]);
+        }
+
+
+    // Debug.Log(returnTenPlusWhatever(1));
+    //Debug.Log(returnTenPlusWhatever(2));
    // Debug.Log();
     }
     public Vector2[,] CreateGrid()
@@ -41,7 +53,7 @@ FeedInData(RuinGrid(Matrix));
         return Matrix;
     }
 
-    public string[] RuinGrid(Vector2[,] matrix){
+    public string[] turnPositionsIntoStringArray(Vector2[,] matrix){
     List<string> partiallyRuinedGrid = new List<string>();
 
      foreach (var item in matrix)
@@ -51,7 +63,6 @@ FeedInData(RuinGrid(Matrix));
      }
     //Debug.Log(partiallyRuinedGrid[3]);
     return partiallyRuinedGrid.ToArray();
-
     }
 
 
