@@ -16,36 +16,20 @@ public class CPPBase : MonoBehaviour
     
     public int maxX;
     public int maxY;
-    private string result;
+    public string result;
     public Vector2[,] Matrix;
     void Start()
     {
-    // string[] result = retrieveData(turnPositionsIntoStringArray(CreateGrid()), 100);
-
-        //result = ;
-
-       result = retrieveData(turnPositionsIntoStringArray(CreateGrid(maxX, maxY)));
-      byte[] rawBytes = Encoding.Unicode.GetBytes(result);
-
-        // Convert the raw byte array to an ASCII string
-        string asciiResult = Encoding.ASCII.GetString(rawBytes);
-        Debug.Log(asciiResult);
-      /*   IntPtr bstrPtr = Marshal.StringToBSTR(result);  // Get BSTR pointer
-        string recoveredString = Marshal.PtrToStringAnsi(bstrPtr);
-        Debug.Log(recoveredString);
-      // for (int i = 0; i < 100; i++)
-        //{
-        /*
-           IntPtr ptr = Marshal.ReadIntPtr(result, 5 * IntPtr.Size);
-              Marshal.PtrToStringBSTR(ptr);
-     */
-        
-        
+    result = retrieveData(turnPositionsIntoStringArray(CreateGrid(maxX, maxY)));
+    result = returnTranslatedResult(result);
+    Debug.Log(result);
     }
 
-    // Debug.Log(returnTenPlusWhatever(1));
-    //Debug.Log(returnTenPlusWhatever(2));
-   // Debug.Log();
+    public string returnTranslatedResult(string input){
+    byte[] rawBytes = Encoding.Unicode.GetBytes(input);
+    string asciiResult = Encoding.ASCII.GetString(rawBytes);
+    return asciiResult; 
+    }
     
     public Vector2[,] CreateGrid(int a, int b)
     {
@@ -68,9 +52,7 @@ public class CPPBase : MonoBehaviour
     string partiallyRuinedGrid = "";
      foreach (var item in matrix)
      {
-        partiallyRuinedGrid += item.x.ToString() + item.y.ToString() + " ";
-
-        //Debug.Log(partiallyRuinedGrid);
+        partiallyRuinedGrid += item.x.ToString() +"."+ item.y.ToString() + ".A,";
      }
     
     return partiallyRuinedGrid;
