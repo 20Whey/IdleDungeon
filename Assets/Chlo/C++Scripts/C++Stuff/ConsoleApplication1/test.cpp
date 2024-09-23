@@ -1,7 +1,4 @@
 #include "test.h"
-#include <iostream>
-
-using namespace std;
 /*
 extern "C" {
 std::array<string, 4> DLL_EXPORT feedToCPP(std::array<string, 4> basis){
@@ -16,25 +13,45 @@ return arr;
         static const char* arr[4] = {"0,0", "1,0", "0,1", "1,1"};
         // Return the array
         return arr;
-    }*/
-    extern "C"{
-      const BSTR* DLL_EXPORT retrieveData(char* arr[], int len)
-        {
-          
-          char* str[len];
-          BSTR returnee[len];
-          for(int i = 0; i < len; i++)
-          { 
-              strcpy_s(str[i], 6, arr[i]);
-              MultiByteToWideChar(CP_ACP, 0, str[i], -1, returnee[i], 0);
-          }
-          delete[] str;
-          return returnee;
-       // return SysAllocString("data", "data")
-        }
-
-
     }
+   extern "C"{
+     std::string DLL_EXPORT retrieveData(const char* inputStr)
+        {
+		 BSTR current = SysAllocString(BSTR(inputStr);
+		int len = SysStringLen(inputStr);
+       int size_needed =  WideCharToMultiByte(CP_ACP, 0, inputStr, len, NULL, 0, NULL, NULL);
+       
+
+		std::string ret(
+		WideCharToMultiByte(CP_UTF8, 0, bstr, len, ret.data(), ret.size(), NULL, NULL);
+        return );
+        }
+      }
+    
+
+*/
+    extern "C"{
+     BSTR DLL_EXPORT retrieveData(char* inputr)
+        {
+      	int len = static_cast<int>(strlen(inputr));
+     	BSTR curr = SysAllocString((BSTR)inputr);
+     	if(len == 0) return nullptr;
+     	int size_needed = WideCharToMultiByte(CP_UTF8, 0, curr, len, NULL, 0, NULL, NULL);
+     	std::string ret(size_needed, '\0');
+      	WideCharToMultiByte(CP_UTF8, 0, curr, len, (LPSTR)ret.data(), ret.size(), NULL, NULL);
+      	return curr;
+        }
+      }
+    
 
     
+
+
+
+
+
+
+
+
+
 
