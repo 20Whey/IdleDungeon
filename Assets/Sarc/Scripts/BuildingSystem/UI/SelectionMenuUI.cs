@@ -7,18 +7,15 @@ using VInspector.Libs;
 public class SelectionMenuUI : MonoBehaviour
 {
 
-    [SerializeField] private Button itemTemplateTest;
-
     [Header("Both Lists must be on the same order")]
     [SerializeField] private GameObject tabContainer;
     [SerializeField] private GameObject containersContainer;
     [Space]
 
-    [SerializeField] private GameObject ArmyTest;
-
     [SerializeField] private List<Button> tabs;
     [Header("This one needs to be filled manually")]
     [SerializeField] private List<Transform> containers;
+    [SerializeField] private List<Button> itemTemplatesTestList;
 
     private float selectedWidth = 200f;
     private float deSelectedWidth = 160f;
@@ -29,15 +26,13 @@ public class SelectionMenuUI : MonoBehaviour
 
         tabs.Add(tabContainer.GetComponentsInChildren<Button>());
 
-        //Removed cause it caused the List to get filled with the Grandchildren+ Transforms
-        //containers.Add(containersContainer.GetComponentsInChildren<Transform>());
+        itemTemplatesTestList.Add(containersContainer.GetComponentsInChildren<Button>());
 
-        itemTemplateTest.onClick.AddListener(() => {
-            Vector3 position = new(transform.position.x, transform.position.y);
-            position = Camera.main.ScreenToWorldPoint(position);
+        itemTemplatesTestList.ForEach(button => {
+            UnitButton unitButton = button.GetComponent<UnitButton>();
 
-            //instanciates the object directly on grid and on the mousePos
-            BuildingSystem.Instance.InitializeWithObject(ArmyTest, position);
+            unitButton.AddListener();
+
         });
 
         //FIX: Refactor for cleaner code
@@ -59,8 +54,15 @@ public class SelectionMenuUI : MonoBehaviour
                     clickedRectTransform.sizeDelta = newSize;
                 }
             });
+
         });
+
+        #region Activate Container One
+        DeactivateOtherContainers();
+        ActivateLinkedContainer(0);
+        #endregion
     }
+
 
     private void Deselect()
     {

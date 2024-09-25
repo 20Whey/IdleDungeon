@@ -274,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &268038228
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1493,7 +1493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &774925462
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1689,8 +1689,9 @@ GameObject:
   - component: {fileID: 903688682}
   - component: {fileID: 903688681}
   - component: {fileID: 903688680}
+  - component: {fileID: 903688683}
   m_Layer: 5
-  m_Name: ItemTemplate
+  m_Name: TrapButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1711,10 +1712,10 @@ RectTransform:
   - {fileID: 635780014}
   m_Father: {fileID: 268038228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 95, y: -74}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &903688680
 MonoBehaviour:
@@ -1798,6 +1799,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903688678}
   m_CullTransparentMesh: 1
+--- !u!114 &903688683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903688678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc47f02212d44d4dab466e78abe9400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitSO: {fileID: 11400000, guid: 13cbb6c9d98db254387e7fc8357f71f1, type: 2}
 --- !u!1 &957374935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,8 +1824,9 @@ GameObject:
   - component: {fileID: 957374939}
   - component: {fileID: 957374938}
   - component: {fileID: 957374937}
+  - component: {fileID: 957374940}
   m_Layer: 5
-  m_Name: ItemTemplate
+  m_Name: MiscButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1832,10 +1847,10 @@ RectTransform:
   - {fileID: 1163574850}
   m_Father: {fileID: 774925462}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 95, y: -74}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957374937
 MonoBehaviour:
@@ -1919,6 +1934,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957374935}
   m_CullTransparentMesh: 1
+--- !u!114 &957374940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957374935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc47f02212d44d4dab466e78abe9400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitSO: {fileID: 11400000, guid: bba91ef2fcf1a3040a31bc596d9bd384, type: 2}
 --- !u!1 &964196573
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,8 +1959,9 @@ GameObject:
   - component: {fileID: 964196577}
   - component: {fileID: 964196576}
   - component: {fileID: 964196575}
+  - component: {fileID: 964196578}
   m_Layer: 5
-  m_Name: ItemTemplate
+  m_Name: SkeletonButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2040,6 +2069,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964196573}
   m_CullTransparentMesh: 1
+--- !u!114 &964196578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964196573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc47f02212d44d4dab466e78abe9400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitSO: {fileID: 11400000, guid: bea51a7c8b6e44441a57e0f9967f5146, type: 2}
 --- !u!1 &1070272203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,12 +2379,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccba13b3cd758094196ee82108df4a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemTemplateTest: {fileID: 964196575}
   tabContainer: {fileID: 536676899}
   containersContainer: {fileID: 1070272203}
-  ArmyTest: {fileID: 3365391818420963198, guid: b728f29b061acd64f9e6ada765ecab81, type: 3}
   tabs: []
-  containers: []
+  containers:
+  - {fileID: 878868598}
+  - {fileID: 268038228}
+  - {fileID: 774925462}
+  itemTemplatesTestList: []
 --- !u!1 &1443024474
 GameObject:
   m_ObjectHideFlags: 0
