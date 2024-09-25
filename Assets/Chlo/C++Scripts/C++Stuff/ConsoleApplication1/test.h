@@ -1,6 +1,8 @@
 #ifndef TEST_H
 #define TEST_H
 #include <comdef.h>
+#include <sstream>
+#include <vector>
 #include <iostream>
 #include <oleauto.h>
 #include <string>
@@ -14,5 +16,6 @@ extern "C" {
 
 }
 
+char* createBody(char* input);
 #endif
 

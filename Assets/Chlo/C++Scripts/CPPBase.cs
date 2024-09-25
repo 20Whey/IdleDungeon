@@ -24,7 +24,7 @@ public class CPPBase : MonoBehaviour
     result = returnTranslatedResult(result);
     Debug.Log(result);
     }
-
+    //A LOT of stack overflow later
     public string returnTranslatedResult(string input){
     byte[] rawBytes = Encoding.Unicode.GetBytes(input);
     string asciiResult = Encoding.ASCII.GetString(rawBytes);
@@ -52,7 +52,12 @@ public class CPPBase : MonoBehaviour
     string partiallyRuinedGrid = "";
      foreach (var item in matrix)
      {
-        partiallyRuinedGrid += item.x.ToString() +"."+ item.y.ToString() + ".A,";
+        string tmp = ".A,";
+        if (UnityEngine.Random.Range(0, 10) >= 9) tmp = ".C,";
+        partiallyRuinedGrid += item.x.ToString() +"."+ item.y.ToString() + tmp;
+            
+
+     
      }
     
     return partiallyRuinedGrid;

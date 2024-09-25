@@ -36,15 +36,14 @@ public class createTiles : MonoBehaviour
     private List<GameObject> utiliseOnMap(params string[] input){
     int x = Int32.Parse(input[0]);
     int y =  Int32.Parse(input[1]);
-    string key = input[2];
-    
+    string key = input[2]; 
     Vector2 ourVec = new Vector2(x, y);
     GameObject chosenObject;
-    
-   
+    if (UnityEngine.Random.Range(0, 10) >= 9) key = "C";
     switch(key){
     case "A":
-     if (UnityEngine.Random.Range(0, 2) == 1) goto case "B";
+  /*  //I'm Sorry Dijktra :l
+     if (UnityEngine.Random.Range(0, 2) == 1) goto case "B";*/
     chosenObject = baseTiles[0];
     break;
     case "B":
