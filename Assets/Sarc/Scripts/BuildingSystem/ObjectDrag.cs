@@ -2,19 +2,12 @@ using UnityEngine;
 
 public class ObjectDrag : MonoBehaviour
 {
-
-    //[SerializeField] private Vector3 offset = new Vector3(0, -1f, 0);
-
     private Vector3 startPosition;
     private float deltaX, deltaY;
 
     private void Start()
     {
         startPosition = Input.mousePosition;
-
-        //Un-used for now, can be dded to give offset to the visual Drag
-        deltaX = startPosition.x - transform.position.x;
-        deltaY = startPosition.y - transform.position.y;
     }
 
 
@@ -29,7 +22,7 @@ public class ObjectDrag : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (Input.GetMouseButtonUp(0)) {
+        if (Input.GetKeyUp(KeyCode.F)) {
             gameObject.GetComponent<PlaceableObject>().CheckPlacement();
             Destroy(this);
         }

@@ -51,7 +51,6 @@ public class BuildingSystem : Singleton<BuildingSystem>
     public void InitializeWithObject(GameObject item, Vector3 position)
     {
         position.z = 0;
-        position.y -= item.GetComponent<SpriteRenderer>().bounds.size.y / 2f;
         Vector3Int cellPos = gridLayout.WorldToCell(position);
         Vector3 newPosition = gridLayout.CellToLocalInterpolated(cellPos);
 

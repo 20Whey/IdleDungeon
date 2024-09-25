@@ -136,6 +136,11 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-349386887-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1965926685-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-736214062-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-268038227-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-903688678-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-774925461-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-957374935-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1070272203-0
         values:
         - iColor: 0
           icon: ReflectionProbe Icon
@@ -154,9 +159,9 @@ MonoBehaviour:
         - iColor: 0
           icon: Folder Icon
         - iColor: 0
-          icon: Folder Icon
+          icon: 
         - iColor: 0
-          icon: Folder Icon
+          icon: 
         - iColor: 0
           icon: Camera Icon
         - iColor: 0
@@ -167,8 +172,18 @@ MonoBehaviour:
           icon: MeshCollider Icon
         - iColor: 0
           icon: MeshCollider Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 8
+          icon: Folder Icon
       goDatasByInstanceId:
-        keys: 7a6a0000326a0000fc690000166a0000206a0000426a0000046a0000726a00004c6a0000586a0000f4690000386a0000ec690000646a00000e6a0000
+        keys: 7a6a0000326a0000fc690000166a0000206a0000426a0000046a0000726a00004c6a0000586a0000f4690000386a0000ec690000646a00000e6a0000726c00002a6c0000f46b00000e6c0000186c00003a6c0000fc6b00006a6c0000446c0000506c0000ec6b0000306c0000e46b00005c6c0000066c0000861effff841effff9418ffff9618ffffa4f1feff
         values:
         - iColor: 0
           icon: ReflectionProbe Icon
@@ -200,3 +215,43 @@ MonoBehaviour:
           icon: MeshCollider Icon
         - iColor: 0
           icon: MeshCollider Icon
+        - iColor: 0
+          icon: ReflectionProbe Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: LightmapParameters Icon
+        - iColor: 0
+          icon: MeshCollider Icon
+        - iColor: 0
+          icon: MeshCollider Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 8
+          icon: Folder Icon
