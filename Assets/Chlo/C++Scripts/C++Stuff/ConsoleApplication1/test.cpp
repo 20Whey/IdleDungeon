@@ -5,7 +5,11 @@ enum Direction{
 	EAST = 1, 
 	WEST = -1
 	};
-	std::vector<std::string> processIndividual(char* input)
+
+	
+
+
+	std::vector<std::string>[] discoverCords(char* input)
 	{
 		int len = static_cast<int>(strlen(input));
 		std::string str(input);
@@ -19,6 +23,7 @@ enum Direction{
 		while (getline(ss, token, delim))
 		{
 			tokens.push_back(token);
+
 		}
 		return tokens;
 	}
@@ -28,17 +33,15 @@ enum Direction{
 	{
 		
 		//foreach token do *something*
-		for (const auto& part : tokens) {
-		}
 		
-		
-		}
+	}
 
 
     extern "C"{
      BSTR DLL_EXPORT retrieveData(char* inputr)
         {
-     	createBody(inputr);
+     	discoverCords(inputr);
+
       	int len = static_cast<int>(strlen(inputr));
      	BSTR curr = SysAllocString((BSTR)inputr);
      	if(len == 0) return nullptr;
