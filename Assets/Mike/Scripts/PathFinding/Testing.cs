@@ -5,7 +5,7 @@ using UnityEngine;
 public class Testing : MonoBehaviour
 {
 	private CharacterPathfindingHandler characterPathfinding;
-	private Pathfinding pathfinding;
+	public Pathfinding pathfinding;
 
 	private void Start()
 	{
@@ -19,7 +19,6 @@ public class Testing : MonoBehaviour
 		{
 			Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			Vector2Int mouseXYPosition = pathfinding.GetGrid().WorldPosTo_XY(mouseWorldPosition);
-			Debug.Log(mouseXYPosition.x + " " + mouseXYPosition.y);
 			List<PathNode> path = pathfinding.FindPath(0, 0, mouseXYPosition.x, mouseXYPosition.y);
 			if (path != null)
 			{
@@ -28,7 +27,7 @@ public class Testing : MonoBehaviour
 					Debug.DrawLine(new Vector2(path[i].x, path[i].y) * 1f + Vector2.one * 1f, new Vector2(path[i + 1].x, path[i + 1].y) * 1f + Vector2.one * 1f, Color.green, 20f);
 				}
 			}
-			characterPathfinding.SetTargetPosition(mouseXYPosition);
+			characterPathfinding.SetTargetPosition(mouseWorldPosition);
 		}
 		if (Input.GetMouseButtonDown(1))
 		{
