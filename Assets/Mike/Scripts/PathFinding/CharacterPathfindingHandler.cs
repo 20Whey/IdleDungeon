@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class CharacterPathfindingHandler : MonoBehaviour
 {
-    private const float speed = 10f;
+    private const float speed = 2f;
 
     private int currentPathIndex;
     private List<Vector2> pathVectorList;
-	private Vector2 characterXYPosition;
+	[SerializeField] private Vector2 characterXYPosition;
 	private Vector2 targetWorldPosition;
 
 	private void Update()
 	{
 		characterXYPosition = Pathfinding.Instance.GetGrid().WorldPosTo_XY(transform.position);
+
 		HandleMovement();
 	}
 	private void HandleMovement()
@@ -21,9 +22,10 @@ public class CharacterPathfindingHandler : MonoBehaviour
 		if (pathVectorList != null)
 		{
 			Vector2 targetPosition = pathVectorList[currentPathIndex];
-			if (Vector2.Distance(characterXYPosition, targetPosition) > 0.1f)
+			targetWorldPosition = Pathfinding.Instance.GetGrid().XY_ToWorldPos(targetPosition.x, targetPosition.y);
+
+			if (Vector2.Distance(transform.position, targetWorldPosition) > 0.1f)
 			{
-				targetWorldPosition = Pathfinding.Instance.GetGrid().XY_ToWorldPos(targetPosition.x, targetPosition.y);
 				transform.position = Vector2.MoveTowards(transform.position, targetWorldPosition, speed * Time.deltaTime);
 			}
 			else
