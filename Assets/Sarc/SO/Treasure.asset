@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Treasure
   m_EditorClassIdentifier: 
   name: Treasure
-  prefabToSpawn: {fileID: 3365391818420963198, guid: 4ac832b7c8cca134191db835b0b1834b, type: 3}
+  prefabToSpawn: {fileID: 1986723656168941264, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}

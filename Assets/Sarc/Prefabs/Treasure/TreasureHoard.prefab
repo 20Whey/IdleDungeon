@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2255374983003043173}
   - component: {fileID: 8123429103454906715}
   - component: {fileID: 3410720387978367309}
+  - component: {fileID: -7600239564193972249}
   m_Layer: 0
   m_Name: TreasureHoard
   m_TagString: Untagged
@@ -97,3 +98,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a559c9509bfd3a243adc40d2191cfa59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldGainFrequency: 1
+--- !u!114 &-7600239564193972249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986723656168941264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1e486941dda9e4c853f307bd16d80e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  area:
+    m_Position: {x: 0, y: 0, z: 0}
+    m_Size: {x: 1, y: 1, z: 1}

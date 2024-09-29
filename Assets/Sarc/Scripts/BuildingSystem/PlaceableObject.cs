@@ -1,13 +1,17 @@
+using System;
 using UnityEngine;
 
 public class PlaceableObject : MonoBehaviour
 {
+
+    public event Action<GameObject> OnPlaced;
 
     public bool Placed { get; private set; }
 
     private Vector3 origin;
 
     [SerializeField] private BoundsInt area;
+
 
     public bool CanBePlaced()
     {
@@ -27,6 +31,8 @@ public class PlaceableObject : MonoBehaviour
         Placed = true;
 
         BuildingSystem.Instance.TakeArea(areaTemp);
+
+        OnPlaced?.Invoke(gameObject);
     }
 
     public void CheckPlacement()
