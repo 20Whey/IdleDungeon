@@ -36,16 +36,8 @@ MonoBehaviour:
         - iColor: 7
           icon: 
       goDatasByInstanceId:
-        keys: 4870ffffaa6fffff886fffff666fffff
-        values:
-        - iColor: 1
-          icon: 
-        - iColor: 3
-          icon: 
-        - iColor: 4
-          icon: 
-        - iColor: 7
-          icon: 
+        keys: 
+        values: []
     - goDatasByGlobalId:
         keys:
         - GlobalObjectId_V1-2-f1749f72a26df6c449b6b090ddefba33-1908019853-0
@@ -65,18 +57,8 @@ MonoBehaviour:
         - iColor: 6
           icon: 
       goDatasByInstanceId:
-        keys: 4a720000667200000c6e0000986f0000c06d0000
-        values:
-        - iColor: 0
-          icon: 
-        - iColor: 1
-          icon: 
-        - iColor: 3
-          icon: 
-        - iColor: 2
-          icon: 
-        - iColor: 6
-          icon: 
+        keys: 
+        values: []
     - goDatasByGlobalId:
         keys:
         - GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-76320828-0
@@ -99,20 +81,8 @@ MonoBehaviour:
         - iColor: 0
           icon: Favorite
       goDatasByInstanceId:
-        keys: 368c00000e8e0000828c00000c910000dc9000009a8f0000
-        values:
-        - iColor: 6
-          icon: 
-        - iColor: 2
-          icon: 
-        - iColor: 3
-          icon: 
-        - iColor: 0
-          icon: 
-        - iColor: 1
-          icon: 
-        - iColor: 0
-          icon: Favorite
+        keys: 
+        values: []
     - goDatasByGlobalId:
         keys: []
         values: []
@@ -144,6 +114,9 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-248205193-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1841524628-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1844580846-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1795018784-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-526426359-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1179175113-0
         values:
         - iColor: 0
           icon: ReflectionProbe Icon
@@ -187,83 +160,19 @@ MonoBehaviour:
           icon: Folder Icon
         - iColor: 0
           icon: LightProbes Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
         - iColor: 0
           icon: Folder Icon
         - iColor: 0
           icon: Canvas Icon
       goDatasByInstanceId:
-        keys: 7a6a0000326a0000fc690000166a0000206a0000426a0000046a0000726a00004c6a0000586a0000f4690000386a0000ec690000646a00000e6a0000726c00002a6c0000f46b00000e6c0000186c00003a6c0000fc6b00006a6c0000446c0000506c0000ec6b0000306c0000e46b00005c6c0000066c0000861effff841effff9418ffff9618ffffa4f1feff7c73000034730000c6720000f27200001473000044730000ce720000747300004e7300005a730000be7200003a730000b672000066730000e0720000ac720000fc720000e872000008730000207300000ee9ffff7ee3ffff7ce3ffff
+        keys: e063000078630000e66200001a6300003c63000088630000ee620000d8630000926300009e630000d46200007e630000c4620000ca63000008630000ba62000024630000106300003063000050630000b0620000ac630000b6630000a2630000dc6200006c630000
         values:
-        - iColor: 0
-          icon: ReflectionProbe Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: Canvas Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: StandaloneInputModule Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: Camera Icon
-        - iColor: 0
-          icon: Canvas Icon
-        - iColor: 0
-          icon: LightmapParameters Icon
-        - iColor: 0
-          icon: MeshCollider Icon
-        - iColor: 0
-          icon: MeshCollider Icon
-        - iColor: 0
-          icon: ReflectionProbe Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: Canvas Icon
-        - iColor: 0
-          icon: AvatarMask On Icon
-        - iColor: 0
-          icon: StandaloneInputModule Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: 
-        - iColor: 0
-          icon: 
-        - iColor: 0
-          icon: Camera Icon
-        - iColor: 0
-          icon: Canvas Icon
-        - iColor: 0
-          icon: LightmapParameters Icon
-        - iColor: 0
-          icon: MeshCollider Icon
-        - iColor: 0
-          icon: MeshCollider Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: Canvas Icon
-        - iColor: 0
-          icon: Folder Icon
-        - iColor: 0
-          icon: Canvas Icon
-        - iColor: 8
-          icon: Folder Icon
         - iColor: 0
           icon: ReflectionProbe Icon
         - iColor: 0
@@ -306,6 +215,12 @@ MonoBehaviour:
           icon: Folder Icon
         - iColor: 0
           icon: LightProbes Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
         - iColor: 0
           icon: Folder Icon
         - iColor: 0

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7cf8ad0ae8253e4b897bbb559d78e07, type: 3}
+  m_Name: Skeleton Army
+  m_EditorClassIdentifier: 
+  name: Skeleton
+  prefabToSpawn: {fileID: 3365391818420963198, guid: b728f29b061acd64f9e6ada765ecab81, type: 3}

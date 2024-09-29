@@ -10,11 +10,14 @@ public class UnitButton : MonoBehaviour
     private void Awake()
     {
         button = GetComponent<Button>();
+
+        if (button == null) {
+            Debug.LogError("Button component is missing on this GameObject: " + gameObject.name);
+        }
     }
 
     public void AddListener()
     {
-        //TODO: Make it spawn at mouse center
         button.onClick.AddListener(() => {
             Vector3 mousePos = Input.mousePosition;
             Vector3 position = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));

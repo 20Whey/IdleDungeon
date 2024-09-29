@@ -17,8 +17,9 @@ public class SelectionMenuUI : MonoBehaviour
     [SerializeField] private List<Transform> containers;
     [SerializeField] private List<Button> itemTemplatesTestList;
 
-    private float selectedWidth = 200f;
-    private float deSelectedWidth = 160f;
+    //TODO: Change magic Numbers for a check of stablished width on the scene
+    private float selectedWidth = 271f;
+    private float deSelectedWidth = 217f;
 
     private void Awake()
     {
@@ -30,6 +31,12 @@ public class SelectionMenuUI : MonoBehaviour
 
         itemTemplatesTestList.ForEach(button => {
             UnitButton unitButton = button.GetComponent<UnitButton>();
+
+            if (unitButton != null) {
+                unitButton.AddListener();
+            } else {
+                Debug.LogWarning("UnitButton component missing on button: " + button.name);
+            }
 
             unitButton.AddListener();
 

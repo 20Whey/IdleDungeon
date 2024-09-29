@@ -23,7 +23,7 @@ public class ObjectDrag : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (Input.GetKeyUp(KeyCode.F)) {
+        if (Input.GetKeyDown(KeyCode.Mouse0)) {
             gameObject.GetComponent<PlaceableObject>().CheckPlacement();
             Destroy(this);
         }
