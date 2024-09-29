@@ -18,15 +18,6 @@ public class Testing : MonoBehaviour
 		if (Input.GetMouseButtonDown(0))
 		{
 			Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			Vector2Int mouseXYPosition = pathfinding.GetGrid().WorldPosTo_XY(mouseWorldPosition);
-			List<PathNode> path = pathfinding.FindPath(0, 0, mouseXYPosition.x, mouseXYPosition.y);
-			if (path != null)
-			{
-				for (int i = 0; i < path.Count - 1; i++)
-				{
-					Debug.DrawLine(new Vector2(path[i].x, path[i].y) * 1f + Vector2.one * 1f, new Vector2(path[i + 1].x, path[i + 1].y) * 1f + Vector2.one * 1f, Color.green, 20f);
-				}
-			}
 			characterPathfinding.SetTargetPosition(mouseWorldPosition);
 		}
 		if (Input.GetMouseButtonDown(1))
