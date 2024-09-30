@@ -10,7 +10,7 @@ using System.Text;
 public class CPPBase : MonoBehaviour
 {
     //private static extern int[,] returnShape(int[,] originalMatrix);
-    [DllImport("test.dll")]
+    /*[DllImport("test.dll")]
     [return: MarshalAs(UnmanagedType.BStr)]
     private static extern string retrieveData(string input);
     
@@ -62,6 +62,6 @@ public class CPPBase : MonoBehaviour
     
     return partiallyRuinedGrid;
     }
-
+*/
 
 }

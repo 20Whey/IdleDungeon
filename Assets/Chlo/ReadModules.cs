@@ -11,10 +11,11 @@ using UnityEngine.Tilemaps;
 public class ReadModules : MonoBehaviour
 {
 
+    public List<MapContainer[]> MapContainers;
     void Awake()
     {
         ReturnPixelKey();
-        ProcessModules(ReturnPixelKey(), SpecialFilterPoolGen("", MapModule.RmSize.Medium));
+        MapContainers = ProcessModules(ReturnPixelKey(), SpecialFilterPoolGen("", MapModule.RmSize.Medium));
     }
 
     List<MapContainer[]> ProcessModules(Dictionary<string, Color> tileset, List<MapModule>[] filteredModules)
