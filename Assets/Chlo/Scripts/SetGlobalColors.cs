@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using mpTl=MapSpace.MapModule;
 using UnityEngine.Sprites;
 public class SetGlobalColors : MonoBehaviour
@@ -13,7 +14,7 @@ public class SetGlobalColors : MonoBehaviour
     // Start is called before the first frame update
     //public mpTl mapMod;
  
-    public Dictionary<string, Color> GlobalColors = new Dictionary<string, Color>();
+    public Dictionary<string, Color32> GlobalColors = new Dictionary<string, Color32>();
     public Texture2D palette;
 
 
