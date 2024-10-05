@@ -8,6 +8,7 @@ public class TreasureHoard : MonoBehaviour
 
 	private void Start()
 	{
+		TreasureManager.instance.AddTreasureToList(gameObject);
 		InvokeRepeating("GoldTick", 1f, 3f);
 	}
 

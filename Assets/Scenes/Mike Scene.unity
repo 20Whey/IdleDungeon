@@ -122,63 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &63797645
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1986723656168941264, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
-      propertyPath: m_Name
-      value: TreasureHoard (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255374983003043173, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255374983003043173, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255374983003043173, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255374983003043173, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255374983003043173, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255374983003043173, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255374983003043173, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255374983003043173, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255374983003043173, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2255374983003043173, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
 --- !u!1 &180410432
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,6 +2997,51 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &1949863959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949863960}
+  - component: {fileID: 1949863961}
+  m_Layer: 0
+  m_Name: TreasureManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1949863960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949863959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5151663, y: -0.46399462, z: -10.005612}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1949863961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949863959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97f06197438338842b8d77dcb228e67c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treasureSources: []
 --- !u!1 &1965850112
 GameObject:
   m_ObjectHideFlags: 0
@@ -3066,6 +3054,8 @@ GameObject:
   - component: {fileID: 1965850114}
   - component: {fileID: 1965850113}
   - component: {fileID: 1965850116}
+  - component: {fileID: 1965850117}
+  - component: {fileID: 1965850118}
   m_Layer: 0
   m_Name: Adventurer
   m_TagString: Adventurer
@@ -3148,7 +3138,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3169,7 +3159,7 @@ Transform:
   m_GameObject: {fileID: 1965850112}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -2.5, z: 0}
+  m_LocalPosition: {x: 6.5, y: -2.5, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3202,6 +3192,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1965850117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965850112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3405b9260506d6f45b3ffb085ecb27d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTreasure: {fileID: 0}
+--- !u!114 &1965850118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965850112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3655ea004c4a6fd468b1b8463d896318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterXYPosition: {x: 0, y: 0}
 --- !u!1 &2139915693
 GameObject:
   m_ObjectHideFlags: 0
@@ -3395,5 +3411,5 @@ SceneRoots:
   - {fileID: 2212431735196648793}
   - {fileID: 940301585}
   - {fileID: 433479671}
-  - {fileID: 63797645}
   - {fileID: 1965850115}
+  - {fileID: 1949863960}
