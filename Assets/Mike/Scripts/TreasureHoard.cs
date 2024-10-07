@@ -4,10 +4,10 @@ using UnityEngine;
 public class TreasureHoard : MonoBehaviour
 {
     private FrequencyTimer goldTickTimer;
-    [Tooltip("Every 1/X a second you will gain gold")]
-    [SerializeField] private int goldGainFrequency = 1;
+    [Tooltip("Every 1/3 a second you will gain gold")]
+    [SerializeField] private int goldGainFrequency = 3;
 
-    int goldIncreaseRate = 10;
+    private int goldIncreaseRate = 1;
 
     private PlaceableObject placeableObject;
 
