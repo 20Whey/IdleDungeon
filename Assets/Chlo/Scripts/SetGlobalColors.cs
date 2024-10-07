@@ -4,15 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using mpTl=MapSpace.MapModule;
 using UnityEngine.Sprites;
 public class SetGlobalColors : MonoBehaviour
 {
     [Tooltip("pixel color keys from left to right, when reaching end going down a row")]
-    [SerializeField] private String[] clrNames;
+    public String[] clrNames;
     // Start is called before the first frame update
     //public mpTl mapMod;
-    public Dictionary<string, Color> GlobalColors = new Dictionary<string, Color>();
+ 
+    public Dictionary<string, Color32> GlobalColors = new Dictionary<string, Color32>();
     public Texture2D palette;
 
 
@@ -29,7 +31,7 @@ public class SetGlobalColors : MonoBehaviour
     public void ReadColorPalette(Texture2D pal)
     {
         Color[] colors = pal.GetPixels();
-        for(var i = 0; i < colors.Length; i++){
+        for(var i = 0; i < clrNames.Length; i++){
             if (clrNames[i] != "null")
             {
                 GlobalColors.Add(clrNames[i], colors[i]);

@@ -5,22 +5,8 @@ using System.Linq;
 using System.IO;
 namespace MapSpace
 {
-
-    public class MapContainer
-    {
-        internal Vector3 RelativePos;
-        internal string Type;
-        //internal Color pix;
-        
-        public MapContainer(Vector3 position, string type)
-        {
-        RelativePos = position;
-        Type = type;
-        }
-    }
-
-    // Start is called before the first frame update
-    [CreateAssetMenu(fileName = "MapPiece", menuName = "MapModule")]
+// Start is called before the first frame update
+    [CreateAssetMenu(menuName = "MapModule")]
     public class MapModule : ScriptableObject
     {
         [Tooltip("Remember to import as a bitmap image!")]
@@ -61,8 +47,25 @@ namespace MapSpace
         public enum RmSize
         {
             Small =0,
-            Medium ,
-            Large
+            Medium =1,
+            Large =2
         }
     }
+    public class MapContainer
+    {
+        internal Vector2 RelativePos;
+        internal string Type;
+
+        internal Color32 Clor;
+        //internal Color pix;
+        
+        public MapContainer(Vector2 position, string type, Color32 clor)
+        {
+        RelativePos = position;
+        Type = type;
+        Clor = clor;
+        }
+    }
+
+    
 }
