@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using VInspector.Libs;
 
 public class SelectionMenuUI : MonoBehaviour
 {
@@ -21,13 +20,13 @@ public class SelectionMenuUI : MonoBehaviour
     private float selectedWidth = 271f;
     private float deSelectedWidth = 217f;
 
-    private void Awake()
+    private void Start()
     {
         int tabIndex;
 
-        tabs.Add(tabContainer.GetComponentsInChildren<Button>());
+        tabs.AddRange(tabContainer.GetComponentsInChildren<Button>());
 
-        itemTemplatesTestList.Add(containersContainer.GetComponentsInChildren<Button>());
+        itemTemplatesTestList.AddRange(containersContainer.GetComponentsInChildren<Button>());
 
         itemTemplatesTestList.ForEach(button => {
             UnitButton unitButton = button.GetComponent<UnitButton>();
