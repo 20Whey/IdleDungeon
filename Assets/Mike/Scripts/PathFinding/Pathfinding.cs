@@ -28,7 +28,6 @@ public class Pathfinding {
 	{
 		Vector2Int startXYPosition = grid.WorldPosTo_XY(startWorldPosition);
 		Vector2Int endXYPosition = grid.WorldPosTo_XY(endWorldPosition);
-		Debug.Log("END XY POS: " + endXYPosition);
 
 		int startX = startXYPosition.x;
 		int startY = startXYPosition.y;

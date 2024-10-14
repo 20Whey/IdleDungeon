@@ -51,11 +51,9 @@ public class CharacterPathfindingHandler : MonoBehaviour
 	public void SetTargetPosition(Vector2 targetPosition)
 	{
 		currentPathIndex = 0;
+
 		pathVectorList = Pathfinding.Instance.FindPath(GetPosition(), targetPosition);
-		foreach (Vector2 vector in pathVectorList)
-		{
-			Debug.Log("Vector List entry: " + vector);
-		}
+
 		if (pathVectorList != null && pathVectorList.Count > 1)
 		{
 			pathVectorList.RemoveAt(0);
