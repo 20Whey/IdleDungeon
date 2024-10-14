@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Treasure
   m_EditorClassIdentifier: 
   name: Treasure
+  uIIcon: {fileID: 21300000, guid: 7f657b5ee99320946881101dab165045, type: 3}
   prefabToSpawn: {fileID: 1986723656168941264, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
+  goldCost: 40

@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Trap
   m_EditorClassIdentifier: 
   name: Trap
+  uIIcon: {fileID: 21300000, guid: b533c652136df4744a089524507a44c6, type: 3}
   prefabToSpawn: {fileID: 3365391818420963198, guid: 295cf0ed7be1dee4db434160df53d115, type: 3}
+  goldCost: 50
