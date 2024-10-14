@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7cf8ad0ae8253e4b897bbb559d78e07, type: 3}
+  m_Script: {fileID: 11500000, guid: b65eed5c9d925a34585c64abf8233f90, type: 3}
   m_Name: Skeleton
   m_EditorClassIdentifier: 
   name: Skeleton
   uIIcon: {fileID: 21300000, guid: 890b02febdd68ee4c9b9cf28a94e73b5, type: 3}
   prefabToSpawn: {fileID: 3365391818420963198, guid: b728f29b061acd64f9e6ada765ecab81, type: 3}
-  goldCost: 10
+  goldCost: 20

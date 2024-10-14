@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu]
-public class UnitSO : ScriptableObject
+public class PlaceableSO : ScriptableObject
 {
     public new string name;
     public Sprite uIIcon;

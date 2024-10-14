@@ -692,7 +692,7 @@ GameObject:
   - component: {fileID: 423180405}
   - component: {fileID: 423180404}
   m_Layer: 5
-  m_Name: Skeleton
+  m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -737,7 +737,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 890b02febdd68ee4c9b9cf28a94e73b5, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1297,7 +1297,7 @@ GameObject:
   - component: {fileID: 635780016}
   - component: {fileID: 635780015}
   m_Layer: 5
-  m_Name: Trap
+  m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b533c652136df4744a089524507a44c6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2378,7 +2378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc47f02212d44d4dab466e78abe9400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSO: {fileID: 11400000, guid: 13cbb6c9d98db254387e7fc8357f71f1, type: 2}
+  unitSO: {fileID: 11400000, guid: 1c043541cc1726e4194eec651e4bd488, type: 2}
 --- !u!1 &957374935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,7 +2513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc47f02212d44d4dab466e78abe9400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSO: {fileID: 11400000, guid: bba91ef2fcf1a3040a31bc596d9bd384, type: 2}
+  unitSO: {fileID: 11400000, guid: 74e0c2b76737d8d42b524db417b78825, type: 2}
 --- !u!1 &964196573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,7 +2648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc47f02212d44d4dab466e78abe9400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSO: {fileID: 11400000, guid: bea51a7c8b6e44441a57e0f9967f5146, type: 2}
+  unitSO: {fileID: 11400000, guid: 225ca912fe1767e42a91cbd9ec879de0, type: 2}
 --- !u!1 &978814384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2835,7 +2835,7 @@ GameObject:
   - component: {fileID: 1083280842}
   - component: {fileID: 1083280841}
   m_Layer: 5
-  m_Name: Misc
+  m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2880,7 +2880,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aad084fdf87a6194dbbe87276e867786, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3044,7 +3044,7 @@ GameObject:
   - component: {fileID: 1163574852}
   - component: {fileID: 1163574851}
   m_Layer: 5
-  m_Name: Misc
+  m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3089,7 +3089,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f082e69f825d0aa44b687e592731c0a8, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3241,7 +3241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc47f02212d44d4dab466e78abe9400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSO: {fileID: 11400000, guid: b93d08f69e363ed49bbb035da9b91163, type: 2}
+  unitSO: {fileID: 11400000, guid: 8781c53232241894db7c49945fdb5718, type: 2}
 --- !u!1 &1311928254
 GameObject:
   m_ObjectHideFlags: 0
@@ -3569,7 +3569,7 @@ GameObject:
   - component: {fileID: 1598734783}
   - component: {fileID: 1598734782}
   m_Layer: 5
-  m_Name: Skeleton
+  m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4050,7 +4050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc47f02212d44d4dab466e78abe9400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitSO: {fileID: 11400000, guid: 4dbb3390d3bc6614eacd02cc06509378, type: 2}
+  unitSO: {fileID: 11400000, guid: 8f9186a6f0a511e4fa071fd4f4b8b646, type: 2}
 --- !u!1 &1959919805
 GameObject:
   m_ObjectHideFlags: 0

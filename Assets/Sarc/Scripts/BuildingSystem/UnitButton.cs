@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 public class UnitButton : MonoBehaviour
 {
-    public UnitSO unitSO;
+    public PlaceableSO unitSO;
 
     private Button button;
 
-    [SerializeField] private Image uIIcon;
+    private Image uIIcon;
 
     private void Awake()
     {
