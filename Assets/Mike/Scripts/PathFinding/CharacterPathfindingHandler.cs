@@ -10,6 +10,8 @@ public class CharacterPathfindingHandler : MonoBehaviour
     private List<Vector2> pathVectorList;
 	[SerializeField] private Vector2 characterXYPosition;
 	private Vector2 targetWorldPosition;
+	public bool isMoving = false;
+	public bool isMovingRight = true;
 
 	private void Update()
 	{
@@ -26,6 +28,7 @@ public class CharacterPathfindingHandler : MonoBehaviour
 
 			if (Vector2.Distance(transform.position, targetWorldPosition) > 0.1f)
 			{
+				isMoving = true;
 				transform.position = Vector2.MoveTowards(transform.position, targetWorldPosition, speed * Time.deltaTime);
 			}
 			else
@@ -34,12 +37,13 @@ public class CharacterPathfindingHandler : MonoBehaviour
 				if (currentPathIndex >= pathVectorList.Count)
 				{
 					StopMoving();
+					isMoving = false;
 				}
 			}
 		}
 	}
 
-	private void StopMoving()
+	public void StopMoving()
 	{
 		pathVectorList = null;
 	}
@@ -57,6 +61,14 @@ public class CharacterPathfindingHandler : MonoBehaviour
 		if (pathVectorList != null && pathVectorList.Count > 1)
 		{
 			pathVectorList.RemoveAt(0);
+			if(pathVectorList[pathVectorList.Count - 1].x >= characterXYPosition.x)
+			{
+				isMovingRight = true;
+			}
+			else
+			{
+				isMovingRight = false;
+			}
 		}
 	}
 }
