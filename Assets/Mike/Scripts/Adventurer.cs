@@ -23,13 +23,6 @@ public class Adventurer : MonoBehaviour
 		}
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision)
-	{
-		if(collision.gameObject.tag == "Minion")
-		{
-			TakeDamage(1);
-		}
-	}
 	public void TakeDamage(int damage)
 	{
 		health -= damage;

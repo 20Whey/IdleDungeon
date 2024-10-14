@@ -9,7 +9,7 @@ public class Testing : MonoBehaviour
 
 	private void Start()
 	{
-		pathfinding = new Pathfinding(18, 10);
+		pathfinding = new Pathfinding(90, 50);
 		characterPathfinding = FindObjectOfType<CharacterPathfindingHandler>();
 	}
 

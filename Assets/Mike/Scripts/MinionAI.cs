@@ -6,6 +6,7 @@ public class MinionAI : MonoBehaviour
 {
 	private enum State
 	{
+		Idle,
 		Roaming,
 		ChaseTarget,
 		Attacking,
@@ -14,15 +15,21 @@ public class MinionAI : MonoBehaviour
 	private Vector2 startingPosition;
 	private Vector2 wanderPosition;
 	private GameObject targetAdventurer;
-	private State state;
+	[SerializeField] private State state;
 	private Rigidbody2D rb;
+	private Animator animator;
+	private SpriteRenderer spriteRenderer;
+	private bool isIdle = true;
+	private const float speed = 1f;
 
 
 	private void Awake()
 	{
 		pathfindingHandler = GetComponent<CharacterPathfindingHandler>();
 		rb = GetComponent<Rigidbody2D>();
-		state = State.Roaming;
+		animator = GetComponent<Animator>();
+		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+		state = State.Idle;
 	}
 
 	private void Start()
@@ -33,9 +40,35 @@ public class MinionAI : MonoBehaviour
 
 	private void Update()
 	{
+		if (pathfindingHandler.isMovingRight == true)
+		{
+			spriteRenderer.flipX = false;
+		}
+		else
+		{
+			spriteRenderer.flipX = true;
+		}
+		if (pathfindingHandler.isMoving == true)
+		{
+			animator.ResetTrigger("Idle");
+			animator.SetTrigger("Patrolling");
+		}
+		else
+		{
+			animator.ResetTrigger("Patrolling");
+			animator.SetTrigger("Idle");
+		}
 		switch (state)
 		{
 		default:
+			case State.Idle:
+				if (isIdle == true)
+				{
+					StartCoroutine(DelayAction());
+					state = State.Roaming;
+				}
+				break;
+
 			case State.Roaming:
 				pathfindingHandler.SetTargetPosition(wanderPosition);
 
@@ -43,6 +76,7 @@ public class MinionAI : MonoBehaviour
 				{
 					//reached current wander pos
 					wanderPosition = GetWanderPosition();
+					state = State.Idle;
 				}
 
 				break;
@@ -53,10 +87,17 @@ public class MinionAI : MonoBehaviour
 				float attackRange = 1f;
 				if((Vector2.Distance(transform.position, targetAdventurer.transform.position) < attackRange))
 				{
-					//state = State.Attacking;
+					state = State.Attacking;
+					pathfindingHandler.StopMoving();
 				}
 				break;
 			case State.Attacking:
+				Vector2 preAttack = transform.position;
+				Vector2 enemyDirection = (targetAdventurer.transform.position - transform.position).normalized;
+				Vector2 oppositeEnemyDirection = enemyDirection * -1;
+
+				transform.position = Vector2.MoveTowards(transform.position, enemyDirection * 2f, speed * Time.deltaTime);
+
 				break;
 		}
 	}
@@ -66,7 +107,7 @@ public class MinionAI : MonoBehaviour
 		//random X/Y direction
 		randomDirection = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f)).normalized;
 
-		return startingPosition + randomDirection * Random.Range(1.5f, 2f);
+		return startingPosition + randomDirection * Random.Range(0.5f, 1f);
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -76,5 +117,12 @@ public class MinionAI : MonoBehaviour
 			state = State.ChaseTarget;
 			targetAdventurer = collision.gameObject;
 		}
+	}
+
+	IEnumerator DelayAction()
+	{
+		isIdle = false;
+		yield return new WaitForSeconds(2f);
+		isIdle = true;
 	}
 }
