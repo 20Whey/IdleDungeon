@@ -36,9 +36,6 @@ public class SelectionMenuUI : MonoBehaviour
             } else {
                 Debug.LogWarning("UnitButton component missing on button: " + button.name);
             }
-
-            unitButton.AddListener();
-
         });
 
         //FIX: Refactor for cleaner code

@@ -48,7 +48,7 @@ public class BuildingSystem : Singleton<BuildingSystem>
 
     #region Item Placement
 
-    public void InitializeWithObject(GameObject item, Vector3 position)
+    public GameObject InitializeWithObject(GameObject item, Vector3 position)
     {
         position.z = 0;
         Vector3Int cellPos = gridLayout.WorldToCell(position);
@@ -56,6 +56,8 @@ public class BuildingSystem : Singleton<BuildingSystem>
 
         GameObject obj = Instantiate(item, newPosition, Quaternion.identity);
         obj.AddComponent<ObjectDrag>();
+
+        return obj;
     }
 
     public bool CanTakeArea(BoundsInt area)

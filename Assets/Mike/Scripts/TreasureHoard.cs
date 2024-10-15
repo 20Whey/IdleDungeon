@@ -32,7 +32,7 @@ public class TreasureHoard : MonoBehaviour
 
     private void AddGold()
     {
-        GoldManager.instance.IncreaseGold(goldIncreaseRate);
+        GoldManager.Instance.IncreaseGold(goldIncreaseRate);
     }
 
 }
