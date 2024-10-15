@@ -11,6 +11,12 @@ public class TreasureManager : MonoBehaviour
 	private void Awake()
 	{
 		instance = this;
+	//I'm just making this work rq
+	var simpleLs =GameObject.FindGameObjectsWithTag("Treasure");
+	foreach (var item in simpleLs)
+	{
+		AddTreasureToList(item);
+	}
 	}
 
 	public void AddTreasureToList(GameObject treasurePile)

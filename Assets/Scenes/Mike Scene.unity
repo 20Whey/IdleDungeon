@@ -1040,7 +1040,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464350564}
+  m_GameObject: {fileID: 433479668}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 0}
@@ -1184,7 +1184,7 @@ Transform:
   m_GameObject: {fileID: 803799655}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.85, y: 0, z: 0}
+  m_LocalPosition: {x: -0.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3207,7 +3207,7 @@ Transform:
   m_GameObject: {fileID: 1965850112}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.4, y: -2.33, z: 0}
+  m_LocalPosition: {x: 2.7, y: -2.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3252,6 +3252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3405b9260506d6f45b3ffb085ecb27d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHeldGold: 0
+  distanceFrom: 0
   targetTreasure: {fileID: 0}
 --- !u!114 &1965850118
 MonoBehaviour:
@@ -3260,7 +3262,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965850112}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3655ea004c4a6fd468b1b8463d896318, type: 3}
   m_Name: 
@@ -3278,8 +3280,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2139915695}
   - component: {fileID: 2139915694}
-  - component: {fileID: 2139915696}
-  - component: {fileID: 2139915697}
   m_Layer: 0
   m_Name: Testing
   m_TagString: Untagged
@@ -3325,6 +3325,14 @@ PrefabInstance:
     - target: {fileID: 1986723656168941264, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
       propertyPath: m_Name
       value: TreasureHoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986723656168941264, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986723656168941264, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
+      propertyPath: m_TagString
+      value: Treasure
       objectReference: {fileID: 0}
     - target: {fileID: 2255374983003043173, guid: e607464a90ef2474eb8081f6e9d1b74f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3443,38 +3451,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 102284710}
   m_SourcePrefab: {fileID: 100100000, guid: a07b09180feb7304da835b435da56294, type: 3}
---- !u!114 &2139915696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139915693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dcd0aea7c382024ebb9b9284677043f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxX: 10
-  maxY: 10
-  result: 
---- !u!114 &2139915697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139915693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22a8a97e85443f9409f32df9b7b1c80b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseTiles:
-  - {fileID: 5267590660545430594, guid: 5c9b3cf049870d64a808a067ee9b42c6, type: 3}
-  - {fileID: 7261768183701878716, guid: 9338fc3fd167c7e40b6ad20b84a75da3, type: 3}
-  - {fileID: 7029493334535861840, guid: 5b3b222db550ed0449aaa607011d1579, type: 3}
-  Map: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

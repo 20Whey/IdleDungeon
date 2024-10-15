@@ -36,6 +36,7 @@ public class TreasureHoard : MonoBehaviour
     }
 
 }
+/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,4 +55,4 @@ public class TreasureHoard : MonoBehaviour
 	{
 		GoldManager.instance.IncreaseGold(goldIncreaseRate);
 	}
-}
+}*/
