@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Adventurer : MonoBehaviour
 {
@@ -11,22 +13,20 @@ public class Adventurer : MonoBehaviour
 	private int health = 10;
 	public float distanceFrom;
 	[SerializeField] private GameObject targetTreasure;
+	private bool isStealing;
+
 
 	private void Awake()
 	{
 		pathfindingHandler = GetComponent<CharacterPathfindingHandler>();
 		rb = GetComponent<Rigidbody2D>();
-	}
+
+		GoToClosestTreasure();
+
+    }
 	private void Update()
 	{
-		targetTreasure = TreasureManager.instance.GetClosestTreasure(gameObject);
-		//if (targetTreasure != null)
-		//comparison to null isn't actually required and takes more resource
-		if (targetTreasure)
-		{
-			pathfindingHandler.SetTargetPosition(targetTreasure.transform.position);
-			
-		}
+		//PathfindToThing
 	}
 
 	void FixedUpdate()
@@ -34,10 +34,11 @@ public class Adventurer : MonoBehaviour
 		
 		if (IsItemCloseEnough(0.5f, gameObject, targetTreasure))
 		{
+			if(!isStealing)StartStealing();
+            //Steal(targetTreasure, counter);
+            // force change Adventurer state and pathfind to exit
 			
-			//Steal(targetTreasure, counter);
-			// force change Adventurer state and pathfind to exit
-		}
+        }
 		else
 		{
 			StopStealing();
@@ -67,21 +68,33 @@ public class Adventurer : MonoBehaviour
 	}
 	public void StartStealing()
 	{
-		
-		Invoke()
+		InvokeRepeating("Steal", 0.4f, 0.4f);
 	}
-	private void Steal(GameObject treasureObject)
+	private void Steal()
 	{
-		int a = 0;
-		
-		
-		
-		Debug.Log("Stealing treasure");
+	//isStealing = true;
+	currentHeldGold += 5;
+	Debug.Log("Stealing treasure");	
 	}
-	
-	
-	
-	
-	
+
+	public GameObject FindClosestTreasure()
+	{
+
+	}
+	public Position ReturnTargetPosition()
+	{
+
+	}
+	public void GoTo()
+	{
+
+		targetTreasure = TreasureManager.instance.GetClosestTreasure(gameObject);
+		//if (targetTreasure != null)
+		//comparison to null isn't actually required and takes more resource
+		if (targetTreasure)
+		{
+			pathfindingHandler.SetTargetPosition(targetTreasure.transform.position);
+		}
+	}
 	
 }
