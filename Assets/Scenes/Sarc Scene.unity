@@ -3277,9 +3277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   container: {fileID: 1311928255}
   tabsContainer: {fileID: 536676900}
-  animationDuration: 0.2
-  hiddenPositionX: -300
-  tabsStartX: -695
+  animationDuration: 0.4
 --- !u!1 &1443024474
 GameObject:
   m_ObjectHideFlags: 0
