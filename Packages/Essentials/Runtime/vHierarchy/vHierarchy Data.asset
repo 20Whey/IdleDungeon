@@ -120,6 +120,7 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-526426359-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1179175113-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-2039576085-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1703632700-0
         values:
         - iColor: 0
           icon: ReflectionProbe Icon
@@ -159,7 +160,7 @@ MonoBehaviour:
           icon: Folder Icon
         - iColor: 0
           icon: Canvas Icon
-        - iColor: 8
+        - iColor: 0
           icon: Folder Icon
         - iColor: 0
           icon: LightProbes Icon
@@ -175,9 +176,67 @@ MonoBehaviour:
           icon: Canvas Icon
         - iColor: 0
           icon: Settings Icon
+        - iColor: 0
+          icon: Folder Icon
       goDatasByInstanceId:
-        keys: 
-        values: []
+        keys: 1a640000a8630000166300004a6300006c630000b86300001e6300000c640000c2630000ce63000004630000ae630000ec620000fe63000038630000e262000054630000406300006063000080630000d8620000e0630000ea630000d66300000c6300009c6300001464000058cbffff
+        values:
+        - iColor: 0
+          icon: ReflectionProbe Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: StandaloneInputModule Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: 
+        - iColor: 0
+          icon: Camera Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: LightmapParameters Icon
+        - iColor: 0
+          icon: MeshCollider Icon
+        - iColor: 0
+          icon: MeshCollider Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: LightProbes Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: AvatarMask On Icon
+        - iColor: 0
+          icon: Folder Icon
+        - iColor: 0
+          icon: Canvas Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Folder Icon
     - goDatasByGlobalId:
         keys:
         - GlobalObjectId_V1-2-37631e78b70a14245889283c84be1386-1811338400-0
@@ -188,12 +247,8 @@ MonoBehaviour:
         - iColor: 0
           icon: 
       goDatasByInstanceId:
-        keys: 02630000ec620000
-        values:
-        - iColor: 0
-          icon: 
-        - iColor: 0
-          icon: 
+        keys: 
+        values: []
     - goDatasByGlobalId:
         keys: []
         values: []

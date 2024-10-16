@@ -4,7 +4,7 @@ using UnityEngine;
 public class GoldManager : Singleton<GoldManager>
 {
     public TMP_Text goldText;
-    private int goldCount = 0;
+    private int goldCount = 200;
 
     private bool enoughGold;
     public bool EnoughGold => enoughGold;
