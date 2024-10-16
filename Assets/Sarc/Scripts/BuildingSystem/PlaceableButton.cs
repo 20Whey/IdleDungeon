@@ -1,8 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UnitButton : MonoBehaviour
+public class PlaceableButton : MonoBehaviour
 {
+    public event Action OnMoneySpent;
+    public event Action OnPlaced;
+
     public PlaceableSO placeableSO;
 
     private Button button;
@@ -43,6 +47,7 @@ public class UnitButton : MonoBehaviour
         GoldManager.Instance.DecreaseGold(placeableSO.goldCost);
         if (GoldManager.Instance.EnoughGold == true) {
             button.interactable = false;
+            OnMoneySpent?.Invoke();
             SpawnDragVisual();
         }
     }
@@ -61,6 +66,7 @@ public class UnitButton : MonoBehaviour
     private void PlaceableObject_OnPlaced(GameObject obj)
     {
         button.interactable = true;
+        OnPlaced?.Invoke();
     }
 }
 

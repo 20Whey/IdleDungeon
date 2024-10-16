@@ -5,36 +5,43 @@ public class UIContainerToggle : MonoBehaviour
 {
     [SerializeField] private RectTransform container;
     [SerializeField] private RectTransform tabsContainer;
-    [Space]
     [SerializeField] private float animationDuration;
+
+    private PlaceableButton[] placeableButtons;
     private Vector2 hiddenPosition;
     private Vector2 shownPosition;
     private Vector3 originalTabsScale;
-    private Vector3 originalTabsPosition;
+    private Vector2 originalTabsPosition;
 
-    //TODO: Remove Magic Numbers
-    private float hiddenPositionX = -300f;
-    private float tabsStartX = -695f;
+    private const float HiddenPositionX = -300f;
+    private const float TabsStartX = -695f;
 
-    private bool isVisible = false;
-    private float hiddenTabXScale = 0f;
+    private bool isVisible;
 
-    void Start()
+    private void Awake()
     {
-        hiddenPosition = new Vector2(hiddenPositionX, container.anchoredPosition.y);
-        shownPosition = new Vector2(0, container.anchoredPosition.y);
+        placeableButtons = GetComponentsInChildren<PlaceableButton>();
 
-        container.anchoredPosition = hiddenPosition;
-        originalTabsScale = tabsContainer.localScale;
-        originalTabsPosition = tabsContainer.anchoredPosition;
-        tabsContainer.localScale = new Vector3(hiddenTabXScale, originalTabsScale.y, originalTabsScale.z);
-
-        tabsContainer.anchoredPosition = new Vector2(tabsStartX, originalTabsPosition.y);
+        foreach (var button in placeableButtons) {
+            button.OnMoneySpent += ToggleContainer;
+            button.OnPlaced += ToggleContainer;
+        }
     }
 
-    void Update()
+    private void Start()
     {
-        //TODO: Remove from Update
+        hiddenPosition = new Vector2(HiddenPositionX, container.anchoredPosition.y);
+        shownPosition = new Vector2(0, container.anchoredPosition.y);
+        container.anchoredPosition = hiddenPosition;
+
+        originalTabsScale = tabsContainer.localScale;
+        originalTabsPosition = tabsContainer.anchoredPosition;
+        SetTabsContainerScale(0f);
+        tabsContainer.anchoredPosition = new Vector2(TabsStartX, originalTabsPosition.y);
+    }
+
+    private void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Tab)) {
             ToggleContainer();
         }
@@ -42,36 +49,37 @@ public class UIContainerToggle : MonoBehaviour
 
     private void ToggleContainer()
     {
-        if (isVisible) {
-            StartCoroutine(MoveContainer(hiddenPosition, new Vector3(hiddenTabXScale, originalTabsScale.y, originalTabsScale.z),
-                new Vector2(tabsStartX, originalTabsPosition.y)));
-        } else {
-            StartCoroutine(MoveContainer(shownPosition, originalTabsScale, originalTabsPosition));
-        }
+        Vector2 targetPosition = isVisible ? hiddenPosition : shownPosition;
+        Vector3 targetTabsScale = isVisible ? new Vector3(0f, originalTabsScale.y, originalTabsScale.z) : originalTabsScale;
+        Vector2 targetTabsPosition = isVisible ? new Vector2(TabsStartX, originalTabsPosition.y) : originalTabsPosition;
+
+        StartCoroutine(MoveContainer(targetPosition, targetTabsScale, targetTabsPosition));
         isVisible = !isVisible;
     }
 
-
-    private IEnumerator MoveContainer(Vector2 targetPosition, Vector2 targetTabsScale, Vector2 targetTabsPosition)
+    private IEnumerator MoveContainer(Vector2 targetPosition, Vector3 targetTabsScale, Vector2 targetTabsPosition)
     {
         Vector2 initialPosition = container.anchoredPosition;
         Vector3 initialTabsScale = tabsContainer.localScale;
         Vector2 initialTabsPosition = tabsContainer.anchoredPosition;
-        float elapsedTime = 0;
 
-        while (elapsedTime < animationDuration) {
-            // Calculate the current position using Lerp
-            container.anchoredPosition = Vector2.Lerp(initialPosition, targetPosition, (elapsedTime / animationDuration));
-            tabsContainer.localScale = Vector3.Lerp(initialTabsScale, targetTabsScale, (elapsedTime / animationDuration));
-            tabsContainer.anchoredPosition = Vector2.Lerp(initialTabsPosition, targetTabsPosition, (elapsedTime / animationDuration));
-
-            elapsedTime += Time.deltaTime;
+        for (float elapsedTime = 0; elapsedTime < animationDuration; elapsedTime += Time.deltaTime) {
+            float t = elapsedTime / animationDuration;
+            container.anchoredPosition = Vector2.Lerp(initialPosition, targetPosition, t);
+            tabsContainer.localScale = Vector3.Lerp(initialTabsScale, targetTabsScale, t);
+            tabsContainer.anchoredPosition = Vector2.Lerp(initialTabsPosition, targetTabsPosition, t);
             yield return null;
         }
 
-        // End at the target positions and scale
+        // Ensure final state is set correctly
         container.anchoredPosition = targetPosition;
         tabsContainer.localScale = targetTabsScale;
         tabsContainer.anchoredPosition = targetTabsPosition;
     }
+
+    private void SetTabsContainerScale(float scaleX)
+    {
+        tabsContainer.localScale = new Vector3(scaleX, originalTabsScale.y, originalTabsScale.z);
+    }
 }
+

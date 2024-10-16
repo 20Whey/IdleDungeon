@@ -29,7 +29,7 @@ public class SelectionMenuUI : MonoBehaviour
         itemTemplatesTestList.AddRange(containersContainer.GetComponentsInChildren<Button>());
 
         itemTemplatesTestList.ForEach(button => {
-            UnitButton unitButton = button.GetComponent<UnitButton>();
+            PlaceableButton unitButton = button.GetComponent<PlaceableButton>();
 
             if (unitButton != null) {
                 unitButton.AddListener();
