@@ -65,12 +65,12 @@ public class BuildingSystem : Singleton<BuildingSystem>
         TileBase[] baseArray = GetTilesBlock(area, groundTileMap);
 
         foreach (var b in baseArray) {
-            if (b == takenTile) {
-                return false;
+            if (b != null && b != takenTile) {
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 
     public void TakeArea(BoundsInt area)

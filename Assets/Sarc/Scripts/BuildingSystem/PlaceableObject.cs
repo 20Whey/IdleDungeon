@@ -42,7 +42,7 @@ public class PlaceableObject : MonoBehaviour
             origin = transform.position;
 
         } else {
-            Destroy(transform.gameObject);
+            Debug.LogWarning("Unallowed Placeable Tile!");
         }
     }
 }

@@ -2,8 +2,21 @@ using UnityEngine;
 
 public class ObjectDrag : MonoBehaviour
 {
+    private PlaceableObject placeableObject;
+
     private Vector3 startPosition;
     private float deltaX, deltaY;
+
+    private void Awake()
+    {
+        placeableObject = GetComponent<PlaceableObject>();
+        placeableObject.OnPlaced += PlaceableObject_OnPlaced;
+    }
+
+    private void PlaceableObject_OnPlaced(GameObject obj)
+    {
+        Destroy(this);
+    }
 
     private void Start()
     {
@@ -25,7 +38,6 @@ public class ObjectDrag : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0)) {
             gameObject.GetComponent<PlaceableObject>().CheckPlacement();
-            Destroy(this);
         }
     }
 }
