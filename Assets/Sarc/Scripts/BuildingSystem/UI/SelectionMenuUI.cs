@@ -7,14 +7,13 @@ public class SelectionMenuUI : MonoBehaviour
 {
 
     [Header("Both Lists must be on the same order")]
-    [SerializeField] private GameObject tabContainer;
-    [SerializeField] private GameObject containersContainer;
+    [SerializeField] private Transform tabContainer;
+    [SerializeField] private Transform placeablesContainer;
     [Space]
 
     [SerializeField] private List<Button> tabs;
-    [Header("This one needs to be filled manually")]
-    [SerializeField] private List<Transform> containers;
-    [SerializeField] private List<Button> itemTemplatesTestList;
+    [SerializeField] private List<Transform> placeablesContainers;
+    [SerializeField] private List<Button> placeablesList;
 
     //TODO: Change magic Numbers for a check of stablished width on the scene
     private float selectedWidth = 271f;
@@ -26,9 +25,9 @@ public class SelectionMenuUI : MonoBehaviour
 
         tabs.AddRange(tabContainer.GetComponentsInChildren<Button>());
 
-        itemTemplatesTestList.AddRange(containersContainer.GetComponentsInChildren<Button>());
+        placeablesList.AddRange(placeablesContainer.GetComponentsInChildren<Button>());
 
-        itemTemplatesTestList.ForEach(button => {
+        placeablesList.ForEach(button => {
             PlaceableButton unitButton = button.GetComponent<PlaceableButton>();
 
             if (unitButton != null) {
@@ -60,6 +59,8 @@ public class SelectionMenuUI : MonoBehaviour
 
         });
 
+        placeablesContainers = GetValidContainers(placeablesContainer);
+
         #region Activate Container One
         DeactivateOtherContainers();
         ActivateLinkedContainer(0);
@@ -78,17 +79,32 @@ public class SelectionMenuUI : MonoBehaviour
 
     private void DeactivateOtherContainers()
     {
-        containers.ForEach(container => {
+        placeablesContainers.ForEach(container => {
 
             container.gameObject.SetActive(false);
         });
     }
     private void ActivateLinkedContainer(int i)
     {
-        if (i >= 0 && i < containers.Count) {
-            Transform selectedContainer = containers[i];
+        if (i >= 0 && i < placeablesContainers.Count) {
+            Transform selectedContainer = placeablesContainers[i];
 
             selectedContainer.gameObject.SetActive(true);
         }
+    }
+
+    List<Transform> GetValidContainers(Transform parent)
+    {
+        List<Transform> containers = new List<Transform>();
+
+        // Iterate through each child of the parent container
+        foreach (Transform child in parent) {
+            // Check if the child has its own children
+            if (child.childCount > 0) {
+                containers.Add(child);
+            }
+        }
+
+        return containers;
     }
 }

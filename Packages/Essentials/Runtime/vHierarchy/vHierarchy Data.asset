@@ -112,7 +112,7 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-903688678-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-774925461-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-957374935-0
-        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1070272203-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-384572524-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-248205193-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1841524628-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1844580846-0
@@ -121,6 +121,8 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1179175113-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-2039576085-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1703632700-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1125048963-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-21110533-0
         values:
         - iColor: 0
           icon: ReflectionProbe Icon
@@ -161,7 +163,7 @@ MonoBehaviour:
         - iColor: 0
           icon: Canvas Icon
         - iColor: 0
-          icon: Folder Icon
+          icon: LightProbes Icon
         - iColor: 0
           icon: LightProbes Icon
         - iColor: 0
@@ -178,8 +180,12 @@ MonoBehaviour:
           icon: Settings Icon
         - iColor: 0
           icon: Folder Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Canvas Icon
       goDatasByInstanceId:
-        keys: 1a640000a8630000166300004a6300006c630000b86300001e6300000c640000c2630000ce63000004630000ae630000ec620000fe63000038630000e262000054630000406300006063000080630000d8620000e0630000ea630000d66300000c6300009c6300001464000058cbffff
+        keys: e071000068710000d27000000e710000307100007a710000da700000d27100008471000090710000c070000070710000a8700000c4710000fc7000009e700000187100000471000024710000b070000094700000a6710000b07100009c710000c87000005c710000da7100009471000070edffff82700000
         values:
         - iColor: 0
           icon: ReflectionProbe Icon
@@ -220,7 +226,7 @@ MonoBehaviour:
         - iColor: 0
           icon: Canvas Icon
         - iColor: 0
-          icon: Folder Icon
+          icon: LightProbes Icon
         - iColor: 0
           icon: LightProbes Icon
         - iColor: 0
@@ -237,6 +243,10 @@ MonoBehaviour:
           icon: Settings Icon
         - iColor: 0
           icon: Folder Icon
+        - iColor: 0
+          icon: Settings Icon
+        - iColor: 0
+          icon: Canvas Icon
     - goDatasByGlobalId:
         keys:
         - GlobalObjectId_V1-2-37631e78b70a14245889283c84be1386-1811338400-0

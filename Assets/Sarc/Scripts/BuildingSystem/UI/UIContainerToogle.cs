@@ -60,7 +60,7 @@ public class UIContainerToggle : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && !cooldownTimer.IsRunning) {
+        if (InputManager.Instance.MenuOpenCloseInput && !cooldownTimer.IsRunning) {
             ToggleContainer();
             cooldownTimer.Start();
         }
