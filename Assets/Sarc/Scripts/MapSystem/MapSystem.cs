@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class BuildingSystem : Singleton<BuildingSystem>
+public class MapSystem : Singleton<MapSystem>
 {
     [SerializeField] private GridLayout gridLayout;
     [SerializeField] private Tilemap groundTileMap;

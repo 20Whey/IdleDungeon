@@ -15,22 +15,22 @@ public class PlaceableObject : MonoBehaviour
 
     public bool CanBePlaced()
     {
-        Vector3Int posiitonInt = BuildingSystem.Instance.GridLayout.LocalToCell(transform.position);
+        Vector3Int posiitonInt = MapSystem.Instance.GridLayout.LocalToCell(transform.position);
         BoundsInt areaTemp = area;
         areaTemp.position = posiitonInt;
 
-        return BuildingSystem.Instance.CanTakeArea(areaTemp);
+        return MapSystem.Instance.CanTakeArea(areaTemp);
     }
 
     public void Place()
     {
-        Vector3Int posiitonInt = BuildingSystem.Instance.GridLayout.LocalToCell(transform.position);
+        Vector3Int posiitonInt = MapSystem.Instance.GridLayout.LocalToCell(transform.position);
         BoundsInt areaTemp = area;
         areaTemp.position = posiitonInt;
 
         Placed = true;
 
-        BuildingSystem.Instance.TakeArea(areaTemp);
+        MapSystem.Instance.TakeArea(areaTemp);
 
         OnPlaced?.Invoke(gameObject);
     }

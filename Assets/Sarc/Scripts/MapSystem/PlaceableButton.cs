@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,9 +14,12 @@ public class PlaceableButton : MonoBehaviour
 
     private Image uIIcon;
 
+    private TextMeshProUGUI textCost;
+
     private void Awake()
     {
         button = GetComponent<Button>();
+        textCost = GetComponentInChildren<TextMeshProUGUI>();
         #region Debug
         if (button == null) {
             Debug.LogError("Button component is missing on this GameObject: " + gameObject.name);
@@ -33,6 +37,7 @@ public class PlaceableButton : MonoBehaviour
         }
 
         uIIcon.sprite = placeableSO.uIIcon;
+        textCost.SetText(placeableSO.goldCost.ToString());
     }
 
     public void AddListener()
@@ -57,7 +62,7 @@ public class PlaceableButton : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         Vector3 position = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));
 
-        GameObject placeablePrefab = BuildingSystem.Instance.InitializeWithObject(placeableSO.prefabToSpawn, position);
+        GameObject placeablePrefab = MapSystem.Instance.InitializeWithObject(placeableSO.prefabToSpawn, position);
         PlaceableObject placeableObject = placeablePrefab.GetComponent<PlaceableObject>();
         placeableObject.OnPlaced += PlaceableObject_OnPlaced;
 

@@ -123,6 +123,16 @@ MonoBehaviour:
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1703632700-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1125048963-0
         - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-21110533-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1448564992-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-15063840-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-280053322-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1088759765-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-288394614-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1077072402-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-216307185-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-50812605-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-1851505948-0
+        - GlobalObjectId_V1-2-3e90298cf8ead8f4e9d3cc8fbc787e01-2083166221-0
         values:
         - iColor: 0
           icon: ReflectionProbe Icon
@@ -184,8 +194,28 @@ MonoBehaviour:
           icon: Settings Icon
         - iColor: 0
           icon: Canvas Icon
+        - iColor: 0
+          icon: LightProbes Icon
+        - iColor: 0
+          icon: LightProbes Icon
+        - iColor: 0
+          icon: LightProbes Icon
+        - iColor: 0
+          icon: LightProbes Icon
+        - iColor: 0
+          icon: LightProbes Icon
+        - iColor: 0
+          icon: PreMatSphere
+        - iColor: 0
+          icon: PreMatSphere
+        - iColor: 0
+          icon: PreMatSphere
+        - iColor: 0
+          icon: PreMatSphere
+        - iColor: 0
+          icon: PreMatSphere
       goDatasByInstanceId:
-        keys: e071000068710000d27000000e710000307100007a710000da700000d27100008471000090710000c070000070710000a8700000c4710000fc7000009e700000187100000471000024710000b070000094700000a6710000b07100009c710000c87000005c710000da7100009471000070edffff82700000
+        keys: e071000068710000d27000000e710000307100007a710000da700000d27100008471000090710000c070000070710000a8700000c4710000fc7000009e700000187100000471000024710000b070000094700000a6710000b07100009c710000c87000005c710000da7100009471000070edffff827000009852ffff9c42ffff3042ffffc841ffff6041ffff323cffffe635ffff2c35ffff8234ffffdc33ffffb02effff542fffff
         values:
         - iColor: 0
           icon: ReflectionProbe Icon
@@ -247,6 +277,30 @@ MonoBehaviour:
           icon: Settings Icon
         - iColor: 0
           icon: Canvas Icon
+        - iColor: 0
+          icon: LightProbes Icon
+        - iColor: 0
+          icon: LightProbes Icon
+        - iColor: 0
+          icon: LightProbes Icon
+        - iColor: 0
+          icon: LightProbes Icon
+        - iColor: 0
+          icon: LightProbes Icon
+        - iColor: 0
+          icon: PreMatSphere
+        - iColor: 0
+          icon: PreMatSphere
+        - iColor: 0
+          icon: PreMatSphere
+        - iColor: 0
+          icon: PreMatSphere
+        - iColor: 0
+          icon: PreMatSphere
+        - iColor: 0
+          icon: PreMatSphere
+        - iColor: 0
+          icon: PreMatSphere
     - goDatasByGlobalId:
         keys:
         - GlobalObjectId_V1-2-37631e78b70a14245889283c84be1386-1811338400-0
